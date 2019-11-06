@@ -1,16 +1,16 @@
 # Unit 3 Final - Elements
 
-Setup
-Clone this repo to your laptop.
-Create a branch for your project.
-Work on the assessment as described below.
-Commit your work.
-Push it to your branch.
-Create a pull request.
-Submit your project to Canvas
-Helper classes we wrote
-Network Helper - wrapper for URLSession
-AppError - handles error throughout the app
+## Setup
+- Clone this repo to your laptop.
+- Create a branch for your project.
+- Work on the assessment as described below.
+- Commit your work.
+- Push it to your branch.
+- Create a pull request.
+- Submit your project to Canvas
+- Helper classes we wrote
+- Network Helper - wrapper for URLSession
+- AppError - handles error throughout the app
 
 ## Objective
 Build a table view that loads and displays a list of the Elements, one per cell/row. Use a custom UITableViewCell subclass. It should have 2 labels and one image. The image should be pinned to the left of cell from the small images endpoint below. The labels should be configured as below:
