@@ -13,34 +13,41 @@
 - AppError - handles error throughout the app
 
 ## Objective
+​
 Build a table view that loads and displays a list of the Elements, one per cell/row. Use a custom UITableViewCell subclass. It should have 2 labels and one image. The image should be pinned to the left of cell from the small images endpoint below. The labels should be configured as below:
-Name
-Symbol(Number) Atomic Weight
-e.g.
-Sodium
-Na(11) 22.989769282
+​
+- Name
+- Symbol(Number) Atomic Weight
+- e.g.
+- Sodium
+- Na(11) 22.989769282
+​
 Load a thumbnail image on each row as described below under Endpoints > Images. For full credit, use a custom tableViewCell to make the image more readable.
+​
+​
 Tapping a cell segues to a detail view that:
-set the navigation bar title to the name of the element
-shows the larger image
-and the following data:
-symbol
-number
-weight
-melting point
-boiling point
-discovery by
+​
+- set the navigation bar title to the name of the element
+- shows the larger image and the following data:
+- symbol
+- number
+- weight
+- melting point
+- boiling point
+- discovery by
+​
 has a button that, when pressed, selects this element as your favorite. This should be implemented by a POST to the favorites endpoint. You will not need to update the UI for your favorite.
 Try to format the detail view as much like an individual element on a traditional periodic table as you can. You cannot use the thumbnail image inside the detail view controller, you need to format it yourself.
-Sample element: https://sciencenotes.org/wp-content/uploads/2015/04/06-Carbon-Tile.png
-Endpoints
-Elements
-GET https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements
-This is a public read-only GET endpoint so no authentication is necessary.
-Images
-Thumbnail (for table view): http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
-Example: http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG
-Full-size: (for detail view): http://images-of-elements.com/{lowercasedElementName}.jpg
+​
+- Sample element: https://sciencenotes.org/wp-content/uploads/2015/04/06-Carbon-Tile.png
+- Endpoints
+- Elements
+- GET https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements
+- This is a public read-only GET endpoint so no authentication is necessary.
+- Images
+- Thumbnail (for table view): http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
+- Example: http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG
+- Full-size: (for detail view): http://images-of-elements.com/{lowercasedElementName}.jpg
 Example: http://images-of-elements.com/argon.jpg
 Use the file naming convention illustrated here to generate urls for images.
 These are both http urls, so you will need change your info.plist to allow arbitrary loads.
