@@ -48,16 +48,24 @@ Try to format the detail view as much like an individual element on a traditiona
 - Thumbnail (for table view): http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
 - Example: http://www.theodoregray.com/periodictable/Tiles/018/s7.JPG
 - Full-size: (for detail view): http://images-of-elements.com/{lowercasedElementName}.jpg
-Example: http://images-of-elements.com/argon.jpg
+- Example: http://images-of-elements.com/argon.jpg
+​
 Use the file naming convention illustrated here to generate urls for images.
 These are both http urls, so you will need change your info.plist to allow arbitrary loads.
 No full size images are available for atomic numbers 90 and up. You can use a placeholder image
-Favorites
-POST https://5d83bc5ebaffda001476aa88.mockapi.io/api/v1/favorites
+​
+- Favorites
+- POST https://5d83bc5ebaffda001476aa88.mockapi.io/api/v1/favorites
+​
 This endpoint expects JSON with the following keys: "favoritedBy", "elementName" and "elementSymbol". Values should be your own name, and the symbol and name of the element currently displayed by the detail page, respectively.
+​
+​
 Using Postman and the endpoint below verify that you have favorited an element.
+​
+​
 Note that the domain name for this endpoint is different than the one above.
-GET https://5d83bc5ebaffda001476aa88.mockapi.io/api/v1/favorites
+​
+- GET https://5d83bc5ebaffda001476aa88.mockapi.io/api/v1/favorites
 JSON Info
 Elements looks like this:
 ```swift
