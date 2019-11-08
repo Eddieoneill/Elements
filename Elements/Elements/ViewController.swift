@@ -9,24 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var elementName: UILabel!
+    @IBOutlet weak var elementSymbleNumberMass: UILabel!
+    @IBOutlet weak var elementImge: UIImageView!
+    
+    let urlReader = URLReader()
+    var elementList = [Elements]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let url = URL(string: "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements") else { return }
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                } catch {
-                    print(error)
-                }
+        urlReader.getElement { (elementArr: [Elements]) in
+            for element in elementArr {
+                self.elementList.append(element)
             }
-        }.resume()
+        }
     }
-
-
+    
+    
 }
 

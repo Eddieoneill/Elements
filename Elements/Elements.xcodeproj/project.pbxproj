@@ -13,7 +13,8 @@
 		6C7DF02A237377030051ABFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7DF028237377030051ABFC /* Main.storyboard */; };
 		6C7DF02C237377040051ABFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7DF02B237377040051ABFC /* Assets.xcassets */; };
 		6C7DF02F237377040051ABFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7DF02D237377040051ABFC /* LaunchScreen.storyboard */; };
-		6C7DF0632373A46B0051ABFC /* URLClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7DF0622373A46B0051ABFC /* URLClass.swift */; };
+		6C7DF0632373A46B0051ABFC /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7DF0622373A46B0051ABFC /* Control.swift */; };
+		6C7DF0BB2375BD760051ABFC /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7DF0BA2375BD760051ABFC /* Elements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		6C7DF02B237377040051ABFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C7DF02E237377040051ABFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7DF030237377040051ABFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C7DF0622373A46B0051ABFC /* URLClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLClass.swift; sourceTree = "<group>"; };
+		6C7DF0622373A46B0051ABFC /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		6C7DF0BA2375BD760051ABFC /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				6C7DF022237377030051ABFC /* AppDelegate.swift */,
 				6C7DF024237377030051ABFC /* SceneDelegate.swift */,
-				6C7DF0622373A46B0051ABFC /* URLClass.swift */,
+				6C7DF0BA2375BD760051ABFC /* Elements.swift */,
+				6C7DF0622373A46B0051ABFC /* Control.swift */,
 				6C7DF026237377030051ABFC /* ViewController.swift */,
 				6C7DF028237377030051ABFC /* Main.storyboard */,
 				6C7DF02B237377040051ABFC /* Assets.xcassets */,
@@ -142,8 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C7DF027237377030051ABFC /* ViewController.swift in Sources */,
+				6C7DF0BB2375BD760051ABFC /* Elements.swift in Sources */,
 				6C7DF023237377030051ABFC /* AppDelegate.swift in Sources */,
-				6C7DF0632373A46B0051ABFC /* URLClass.swift in Sources */,
+				6C7DF0632373A46B0051ABFC /* Control.swift in Sources */,
 				6C7DF025237377030051ABFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
