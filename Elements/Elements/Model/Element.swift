@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Elements: Codable {
+struct DetailElements: Codable {
     let name: String?
     let appearance: String?
     let atomic_mass: Double?
@@ -31,9 +31,12 @@ struct Elements: Codable {
     let ypos: Int?
     let shells: [Int]?
     
-    enum SerializationError: Error {
-        case missing (String)
-        case invalid (String, Any)
-    }
+}
+
+struct ElementOverView: Codable {
+    let id: Int?
+    let elementSymbol: String?
+    let elementName: String?
+    let favoritedBy: String?
 }
 

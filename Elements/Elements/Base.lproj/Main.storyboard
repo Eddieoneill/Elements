@@ -19,14 +19,14 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="elementCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="tjQ-LS-sIf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="elementCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ElementX" rowHeight="121" id="tjQ-LS-sIf" customClass="ElementTableViewCell" customModule="Elements" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjQ-LS-sIf" id="3P3-IT-Nr8">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ElementX" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjQ-LS-sIf" id="3P3-IT-Nr8">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEN-Ho-qCB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XEN-Ho-qCB">
                                                     <rect key="frame" x="0.0" y="-4" width="153" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -47,7 +47,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="11b-3B-ONa" kind="show" id="vxN-ro-oim"/>
+                                            <outlet property="elementDetail" destination="wOa-Sh-Vbb" id="RVy-E0-xqM"/>
+                                            <outlet property="elementImage" destination="XEN-Ho-qCB" id="FKW-2A-M6L"/>
+                                            <outlet property="elementName" destination="8wC-NB-JKY" id="YYH-Fa-0fr"/>
+                                            <segue destination="11b-3B-ONa" kind="show" identifier="ElementDetailScreen" id="Uf9-jA-BxO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -63,21 +66,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="HL1-3Y-rEP"/>
+                    <connections>
+                        <outlet property="tableView" destination="GDR-0E-EMG" id="p6j-vv-3Gb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Element Detail View Controller-->
         <scene sceneID="Cup-Fo-FC8">
             <objects>
-                <viewController id="11b-3B-ONa" sceneMemberID="viewController">
+                <viewController id="11b-3B-ONa" customClass="ElementDetailViewController" customModule="Elements" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E0U-jF-DK9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-Na-SiQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-Na-SiQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="\(number)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-It-5an">
                                 <rect key="frame" x="20" y="98" width="82.666666666666671" height="77.333333333333314"/>
@@ -122,7 +128,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="\(symble)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-nV-uRU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="\(symbol)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-nV-uRU">
                                 <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="b5v-nV-uRU" secondAttribute="height" multiplier="1:1" id="RSM-ET-UYw"/>
@@ -179,6 +185,16 @@
                         <viewLayoutGuide key="safeArea" id="tzV-yG-JiD"/>
                     </view>
                     <navigationItem key="navigationItem" id="J9p-Oo-uet"/>
+                    <connections>
+                        <outlet property="discoveredBy" destination="eHI-xn-CCo" id="OBT-oS-kk2"/>
+                        <outlet property="elementAtomicMass" destination="gk8-Ka-Pqu" id="jS4-cn-sCN"/>
+                        <outlet property="elementBoilingPoiny" destination="Mfo-yz-OTa" id="wmF-UP-Rbl"/>
+                        <outlet property="elementImage" destination="u1t-Na-SiQ" id="4lK-bi-hWq"/>
+                        <outlet property="elementMeltingPoint" destination="3rs-d0-npH" id="Rxi-1b-tn1"/>
+                        <outlet property="elementName" destination="CfN-ci-4yc" id="cMY-Zq-4XI"/>
+                        <outlet property="elementNumber" destination="EfN-It-5an" id="8lk-Mh-kaJ"/>
+                        <outlet property="elementSymbol" destination="b5v-nV-uRU" id="GHC-z5-UZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeK-3y-0YE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,4 +219,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="link" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
