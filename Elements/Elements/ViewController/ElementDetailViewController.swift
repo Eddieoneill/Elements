@@ -20,15 +20,33 @@ class ElementDetailViewController: UIViewController {
     
     var element: DetailElements? = nil
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard let element = element else { return }
+        setElementDetail(element: element)
+    }
+    
     func setElementDetail(element: DetailElements) {
-        var thumbnailName = element.name
+        let thumbnailName = element.name?.lowercased() ?? "nil"
+        
+        view.backgroundColor = .black
+        elementName.textColor = .white
+        elementNumber.textColor = .white
+        elementMeltingPoint.textColor = .white
+        elementBoilingPoiny.textColor = .white
+        elementSymbol.textColor = .white
+        discoveredBy.textColor = .white
+        elementAtomicMass.textColor = .white
         
         elementName.text = element.name ?? "nil"
-        elementNumber.text = "\(element.number)"
-        elementMeltingPoint.text = "\(element.melt)"
-        elementBoilingPoiny.text = "\(element.boil)"
-        elementSymbol.text = "\(element,symbol)"
-        if let url = URL(string: " http://images-of-elements.com/\(thumbnailName).jpg") {
+        elementNumber.text = "\(element.number ?? 0)"
+        elementMeltingPoint.text = "\(element.melt ?? 0)"
+        elementBoilingPoiny.text = "\(element.boil ?? 0)"
+        elementSymbol.text = "\(element.symbol ?? "nil")"
+        discoveredBy.text = "\(element.discovered_by ?? "nil")"
+        elementAtomicMass.text = "\(element.atomic_mass ?? 0)"
+        
+        if let url = URL(string: "https://images-of-elements.com/\(thumbnailName).jpg") {
             elementImage.load(url: url)
         }
     }
